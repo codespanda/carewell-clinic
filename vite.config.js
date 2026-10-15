@@ -4,8 +4,8 @@ import react from "@vitejs/plugin-react"
 import tailwindcss from "@tailwindcss/vite"
 
 export default defineConfig({
-  // Served from https://<user>.github.io/carewell-clinic/ on GitHub Pages
-  base: process.env.GITHUB_PAGES ? "/carewell-clinic/" : "/",
+  // Served from the custom domain root (carewellclinic.codespanda.com), see public/CNAME
+  base: "/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: { "@": path.resolve(__dirname, "./src") },
