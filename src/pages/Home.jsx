@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <InfoBar className="-mt-6 lg:-mt-24" />
+      <InfoBar className="-mt-6 lg:-mt-40" />
       <ServicesGrid />
       <WhyChoose />
       <Doctors />
