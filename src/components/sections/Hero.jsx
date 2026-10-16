@@ -72,14 +72,15 @@ export default function Hero() {
         />
       </div>
 
-      {/* Desktop: banner image fills the right side to the page edge, as in the design */}
+      {/* Desktop: as in the design, the doctor stands right on top of the info bar
+          (which overlaps the hero by 6rem), so the image ends where the bar begins. */}
       <img
         src={heroDoctor}
         srcSet={heroSrcSet}
-        sizes="54vw"
+        sizes="800px"
         fetchpriority="high"
         alt="Smiling female doctor with stethoscope and arms crossed"
-        className="absolute bottom-0 right-0 hidden h-full w-[54%] object-cover object-center lg:block [mask-image:linear-gradient(to_right,transparent,black_16%),linear-gradient(to_bottom,transparent,black_10%)] [mask-composite:intersect]"
+        className="absolute bottom-24 left-[calc(50%-4rem)] hidden h-[calc(100%-6rem)] max-h-[580px] w-auto max-w-none lg:block [mask-image:linear-gradient(to_right,transparent,black_14%,black_90%,transparent),linear-gradient(to_bottom,transparent,black_8%)] [mask-composite:intersect]"
       />
     </section>
   )
