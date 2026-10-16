@@ -67,15 +67,20 @@ export default function Hero() {
 
       {/* Desktop: as in the design, the doctor stands right on top of the info bar
           (which overlaps the hero by 6rem), so the image ends where the bar begins.
-          It sits beside the text but always reaches the right page edge (~850px wide). */}
-      <img
-        src={heroDoctor}
-        srcSet={heroSrcSet}
-        sizes="800px"
-        fetchpriority="high"
-        alt="Smiling female doctor with stethoscope and arms crossed"
-        className="absolute bottom-24 left-[max(calc(50%-7rem),calc(100%-840px))] hidden h-[calc(100%-6rem)] max-h-[580px] w-auto max-w-none lg:block [mask-image:linear-gradient(to_right,transparent,black_26%),linear-gradient(to_bottom,transparent,black_8%)] [mask-composite:intersect]"
-      />
+          It stays inside the page container: from just left of centre to the
+          container's right edge, lined up with the header's "Book Appointment" button. */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-24 top-0 hidden lg:block">
+        <div className="relative mx-auto h-full max-w-7xl px-8">
+          <img
+            src={heroDoctor}
+            srcSet={heroSrcSet}
+            sizes="720px"
+            fetchpriority="high"
+            alt="Smiling female doctor with stethoscope and arms crossed"
+            className="absolute bottom-0 left-[calc(50%-7rem)] h-full max-h-[580px] w-[calc(50%+5rem)] object-cover object-center [mask-image:linear-gradient(to_right,transparent,black_26%),linear-gradient(to_bottom,transparent,black_8%)] [mask-composite:intersect]"
+          />
+        </div>
+      </div>
     </section>
   )
 }
