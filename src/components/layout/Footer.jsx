@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Logo } from "@/components/shared"
-import { contact, navLinks, services } from "@/data/site"
+import { contact, moreLinks, navLinks, services } from "@/data/site"
 
 const socials = [
   { icon: Facebook, label: "Facebook", href: "#" },
@@ -24,7 +24,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-white">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 pb-10 pt-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr_1.4fr] lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 pb-10 pt-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-[1.3fr_1.4fr_1fr_1.2fr_1.3fr] lg:px-8">
         <div>
           <Logo />
           <p className="mt-4 max-w-xs text-[13px] leading-relaxed text-muted-foreground">
@@ -46,8 +46,8 @@ export default function Footer() {
 
         <div>
           <FooterTitle>Quick Links</FooterTitle>
-          <ul className="space-y-2.5 text-[13px] text-muted-foreground">
-            {navLinks.map((l) => (
+          <ul className="grid grid-cols-2 gap-x-4 gap-y-2.5 text-[13px] text-muted-foreground">
+            {[...navLinks.slice(1), ...moreLinks.slice(0, 3)].map((l) => (
               <li key={l.to}>
                 <Link to={l.to} className="hover:text-primary">{l.label}</Link>
               </li>

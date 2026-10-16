@@ -79,6 +79,12 @@
   from { height: var(--radix-accordion-content-height); }
   to { height: 0; }
 }
+/* Printing a lab report: show only the report card */
+@media print {
+  header, footer { display: none !important; }
+  #printable { box-shadow: none; border: 0; }
+}
+
 @keyframes fade {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: none; }

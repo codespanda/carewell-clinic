@@ -25,7 +25,8 @@ export const navLinks = [
   { label: "About Us", to: "/about" },
   { label: "Services", to: "/services" },
   { label: "Doctors", to: "/doctors" },
-  { label: "Testimonials", to: "/testimonials" },
+  { label: "Packages", to: "/packages" },
+  { label: "Reports", to: "/reports" },
   { label: "Blog", to: "/blog" },
   { label: "Contact", to: "/contact" },
 ]
@@ -318,4 +319,11 @@ export const faqs = [
     q: "Can I get my lab reports online?",
     a: "Yes, lab reports are shared via email and WhatsApp as soon as they are ready, usually within 24 hours.",
   },
+]
+
+export const moreLinks = [
+  { label: "Gallery", to: "/gallery" },
+  { label: "FAQs", to: "/faq" },
+  { label: "Careers", to: "/careers" },
+  { label: "Book Appointment", to: "/appointment" },
 ]

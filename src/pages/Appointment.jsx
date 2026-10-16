@@ -100,7 +100,11 @@ export default function Appointment() {
               </div>
               <div className="space-y-2 sm:col-span-2">
                 <Label htmlFor="a-notes">Reason for Visit</Label>
-                <Textarea id="a-notes" name="notes" placeholder="Briefly describe your symptoms or concerns" />
+                <Textarea
+                  id="a-notes"
+                  name="notes"
+                  defaultValue={params.get("package") ? `Health package: ${params.get("package")}` : ""}
+                  placeholder="Briefly describe your symptoms or concerns" />
               </div>
               <Button type="submit" size="lg" className="sm:col-span-2">Confirm Appointment</Button>
             </form>

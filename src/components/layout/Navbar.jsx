@@ -24,7 +24,7 @@ export default function Navbar() {
       <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Logo />
 
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Main">
+        <nav className="hidden items-center gap-6 xl:flex" aria-label="Main">
           {navLinks.map((l) => (
             <NavLink
               key={l.to}
@@ -42,7 +42,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-5 lg:flex">
+        <div className="hidden items-center gap-5 xl:flex">
           <a href={contact.phoneHref} className="flex items-center gap-2 text-[13px] font-semibold text-navy hover:text-primary">
             <Phone className="h-4 w-4" />
             {contact.phone}
@@ -52,13 +52,13 @@ export default function Navbar() {
           </Button>
         </div>
 
-        <Button variant="ghost" size="icon" className="lg:hidden" onClick={() => setOpen((v) => !v)} aria-label="Toggle menu" aria-expanded={open}>
+        <Button variant="ghost" size="icon" className="xl:hidden" onClick={() => setOpen((v) => !v)} aria-label="Toggle menu" aria-expanded={open}>
           {open ? <X /> : <Menu />}
         </Button>
       </div>
 
       {open && (
-        <div className="border-t bg-white lg:hidden">
+        <div className="border-t bg-white xl:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col px-4 py-3 sm:px-6" aria-label="Mobile">
             {navLinks.map((l) => (
               <NavLink

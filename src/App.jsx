@@ -5,7 +5,11 @@ import About from "@/pages/About"
 import Services from "@/pages/Services"
 import ServiceDetail from "@/pages/ServiceDetail"
 import DoctorsPage from "@/pages/DoctorsPage"
-import TestimonialsPage from "@/pages/TestimonialsPage"
+import Reports from "@/pages/Reports"
+import Packages from "@/pages/Packages"
+import Faq from "@/pages/Faq"
+import Gallery from "@/pages/Gallery"
+import Careers from "@/pages/Careers"
 import Blog from "@/pages/Blog"
 import BlogPost from "@/pages/BlogPost"
 import Contact from "@/pages/Contact"
@@ -22,7 +26,11 @@ export default function App() {
         <Route path="services" element={<Services />} />
         <Route path="services/:slug" element={<ServiceDetail />} />
         <Route path="doctors" element={<DoctorsPage />} />
-        <Route path="testimonials" element={<TestimonialsPage />} />
+        <Route path="reports" element={<Reports />} />
+        <Route path="packages" element={<Packages />} />
+        <Route path="faq" element={<Faq />} />
+        <Route path="gallery" element={<Gallery />} />
+        <Route path="careers" element={<Careers />} />
         <Route path="blog" element={<Blog />} />
         <Route path="blog/:slug" element={<BlogPost />} />
         <Route path="contact" element={<Contact />} />

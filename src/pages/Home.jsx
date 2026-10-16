@@ -4,6 +4,7 @@ import ServicesGrid from "@/components/sections/ServicesGrid"
 import WhyChoose from "@/components/sections/WhyChoose"
 import Doctors from "@/components/sections/Doctors"
 import Testimonials from "@/components/sections/Testimonials"
+import StatsBar from "@/components/sections/StatsBar"
 import CtaBanner from "@/components/sections/CtaBanner"
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <ServicesGrid />
       <WhyChoose />
       <Doctors />
+      <StatsBar className="pt-4" />
       <Testimonials />
       <CtaBanner />
     </>
