@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button"
 import { SmartImage } from "@/components/shared"
 import { images } from "@/data/site"
 import heroDoctor from "@/assets/hero-doctor.webp"
+import heroDoctorSm from "@/assets/hero-doctor-sm.webp"
+
+const heroSrcSet = `${heroDoctorSm} 900w, ${heroDoctor} 1600w`
 
 const highlights = [
   { icon: UserRound, label: ["Experienced", "Doctors"] },
@@ -62,6 +65,8 @@ export default function Hero() {
         {/* Mobile / tablet: banner image below the text */}
         <img
           src={heroDoctor}
+          srcSet={heroSrcSet}
+          sizes="100vw"
           alt="Smiling female doctor with stethoscope and arms crossed"
           className="-mx-4 w-[calc(100%+2rem)] max-w-none sm:-mx-6 sm:w-[calc(100%+3rem)] lg:hidden [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]"
         />
@@ -70,8 +75,11 @@ export default function Hero() {
       {/* Desktop: banner image fills the right side to the page edge, as in the design */}
       <img
         src={heroDoctor}
+        srcSet={heroSrcSet}
+        sizes="54vw"
+        fetchpriority="high"
         alt="Smiling female doctor with stethoscope and arms crossed"
-        className="absolute bottom-0 right-0 hidden h-full w-[54%] object-cover object-left lg:block [mask-image:linear-gradient(to_right,transparent,black_16%),linear-gradient(to_bottom,transparent,black_10%)] [mask-composite:intersect]"
+        className="absolute bottom-0 right-0 hidden h-full w-[54%] object-cover object-center lg:block [mask-image:linear-gradient(to_right,transparent,black_16%),linear-gradient(to_bottom,transparent,black_10%)] [mask-composite:intersect]"
       />
     </section>
   )
