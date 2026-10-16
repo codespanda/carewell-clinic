@@ -3,6 +3,7 @@ import { CalendarDays, Cpu, LayoutGrid, UserRound, HeartHandshake } from "lucide
 import { Button } from "@/components/ui/button"
 import { SmartImage } from "@/components/shared"
 import { images } from "@/data/site"
+import heroDoctor from "@/assets/hero-doctor.webp"
 
 const highlights = [
   { icon: UserRound, label: ["Experienced", "Doctors"] },
@@ -20,7 +21,7 @@ export default function Hero() {
       </div>
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 pt-12 sm:px-6 lg:grid-cols-2 lg:px-8 lg:pt-16">
-        <div className="pb-8 lg:pb-32">
+        <div className="pb-8 lg:min-h-[600px] lg:pb-32">
           <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-primary">Welcome to CareWell Clinic</p>
           <h1 className="text-4xl font-bold leading-[1.15] text-navy sm:text-5xl lg:text-[54px]">
             Compassionate Care
@@ -58,18 +59,20 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto h-[420px] w-full max-w-md self-end sm:h-[520px] lg:h-[600px] lg:max-w-none">
-          {/* Teal arc */}
-          <div className="absolute -right-40 bottom-0 h-[420px] w-[420px] rounded-full bg-gradient-to-br from-primary/80 to-primary sm:h-[520px] sm:w-[520px] lg:-right-56 lg:bottom-[-40px] lg:h-[600px] lg:w-[600px]" aria-hidden />
-          <div className="absolute -right-32 bottom-10 h-[360px] w-[360px] rounded-full border-[18px] border-white/30 lg:-right-44 lg:h-[520px] lg:w-[520px]" aria-hidden />
-          <SmartImage
-            src={images.heroDoctor}
-            alt="Smiling female doctor with stethoscope"
-            loading="eager"
-            className="absolute bottom-0 left-1/2 h-full w-[85%] -translate-x-1/2 rounded-t-[200px] object-cover object-top [mask-image:linear-gradient(to_bottom,black_80%,transparent)]"
-          />
-        </div>
+        {/* Mobile / tablet: banner image below the text */}
+        <img
+          src={heroDoctor}
+          alt="Smiling female doctor with stethoscope and arms crossed"
+          className="-mx-4 w-[calc(100%+2rem)] max-w-none sm:-mx-6 sm:w-[calc(100%+3rem)] lg:hidden [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]"
+        />
       </div>
+
+      {/* Desktop: banner image fills the right side to the page edge, as in the design */}
+      <img
+        src={heroDoctor}
+        alt="Smiling female doctor with stethoscope and arms crossed"
+        className="absolute bottom-0 right-0 hidden h-full w-[54%] object-cover object-left lg:block [mask-image:linear-gradient(to_right,transparent,black_16%),linear-gradient(to_bottom,transparent,black_10%)] [mask-composite:intersect]"
+      />
     </section>
   )
 }

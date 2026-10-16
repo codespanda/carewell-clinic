@@ -32,7 +32,6 @@ export const navLinks = [
 ]
 
 export const images = {
-  heroDoctor: u("photo-1614608682850-e0d6ed316d47", 1000),
   heroBg: u("photo-1586773860418-d37222d8fce3", 1600),
   clinic: u("photo-1629909613654-28e377c37b09", 1200),
   about: u("photo-1519494026892-80bbd2d6fd0d", 1200),
