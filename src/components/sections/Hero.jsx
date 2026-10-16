@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom"
 import { CalendarDays, Cpu, LayoutGrid, UserRound, HeartHandshake } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { SmartImage } from "@/components/shared"
-import { images } from "@/data/site"
 import heroDoctor from "@/assets/hero-doctor.webp"
 import heroDoctorSm from "@/assets/hero-doctor-sm.webp"
 
@@ -16,12 +14,7 @@ const highlights = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden">
-      {/* Soft clinic backdrop */}
-      <div className="absolute inset-0" aria-hidden>
-        <SmartImage src={images.heroBg} alt="" className="h-full w-full object-cover opacity-[0.12] blur-[2px]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/40" />
-      </div>
+    <section className="relative overflow-hidden bg-white">
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 pt-12 sm:px-6 lg:grid-cols-2 lg:px-8 lg:pt-16">
         <div className="pb-8 lg:min-h-[600px] lg:pb-32">
