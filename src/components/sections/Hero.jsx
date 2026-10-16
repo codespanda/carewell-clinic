@@ -6,7 +6,7 @@ import { images } from "@/data/site"
 import heroDoctor from "@/assets/hero-doctor.webp"
 import heroDoctorSm from "@/assets/hero-doctor-sm.webp"
 
-const heroSrcSet = `${heroDoctorSm} 900w, ${heroDoctor} 1600w`
+const heroSrcSet = `${heroDoctorSm} 900w, ${heroDoctor} 1536w`
 
 const highlights = [
   { icon: UserRound, label: ["Experienced", "Doctors"] },
@@ -80,7 +80,7 @@ export default function Hero() {
         sizes="800px"
         fetchpriority="high"
         alt="Smiling female doctor with stethoscope and arms crossed"
-        className="absolute bottom-24 left-[calc(50%-4rem)] hidden h-[calc(100%-6rem)] max-h-[580px] w-auto max-w-none lg:block [mask-image:linear-gradient(to_right,transparent,black_14%,black_90%,transparent),linear-gradient(to_bottom,transparent,black_8%)] [mask-composite:intersect]"
+        className="absolute bottom-24 left-[calc(50%-7rem)] hidden h-[calc(100%-6rem)] max-h-[580px] w-auto max-w-none lg:block [mask-image:linear-gradient(to_right,transparent,black_26%,black_90%,transparent),linear-gradient(to_bottom,transparent,black_8%)] [mask-composite:intersect]"
       />
     </section>
   )
